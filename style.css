@@ -33,6 +33,11 @@ body{
 }
 
 
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+  }
+
 @media (min-width: 768px) {
     .w-isi{
         width: 760px;
