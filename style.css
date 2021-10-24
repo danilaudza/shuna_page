@@ -1,0 +1,40 @@
+body{
+    background-color: #141518;
+}
+
+.bg-dark{
+    background-color: #141518;
+}
+
+.bg-dark2{
+    background-color: #1b1c1f;
+}
+
+.bg-dark3{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+.bg-discord{
+    background-color: #5865f2;
+}
+
+.font-inter{
+    font-family: 'Inter', sans-serif;
+}
+
+.font-mono{
+    font-family: monospace;
+}
+
+.w-isi{
+    width: full;
+}
+
+
+@media (min-width: 768px) {
+    .w-isi{
+        width: 760px;
+    }
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shuna | Docs</title>
+</head>
+<body>
+    <section>
+        <div class="w-full text-gray-200 pt-5 bg-dark font-inter">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+            <div class="p-4 flex flex-row items-center justify-between">
+            <a href="index.html" class="text-lg font-semibold tracking-widest rounded-lg text-white">Shuna</a>
+            <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+            <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 md:ml-4" href="https://danilaudza.com/">Author</a>
+            <a class="px-4 py-2 mt-2 text-sm bg-transparent text-white rounded-lg md:mt-0 md:ml-4" href="docs.html">Documentation</a>
+            </nav>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="w-isi mx-auto font-inter px-5">
+            <div class="bg-dark2 mt-20 py-10 px-14 table-auto">
+            <h2 class="text-white text-2xl font-bold">Pengetahuan Umum Shuna!</h2>
+            <p class="my-2 font-lg text-gray-300">Gunakan /help untuk mencari tahu command dan website Shuna!</p>
+            <p class="my-2 font-lg text-gray-300">Prefix bawaan shuna adalah <span class="font-bold text-white">"+"</span></p>
+        
+        </div>
+    </section>
+
+    <section>
+        <div class="w-isi mx-auto font-inter px-5">
+            <div class="bg-dark2 mt-20 py-10 px-14 table-auto">
+            <h2 class="text-white text-2xl font-bold">Welcoming Message</h2>
+            <p class="my-2 font-lg text-gray-300">Pakai slash command /welcome</p>
+            <div class="bg-dark px-5 py-5 rounded-lg">
+                <p class="my-2 font-lg font-mono text-white">/welcome <span class="text-green-400">[channel]</span> <span class="text-blue-400">[message]</span></p>
+                <p class="my-2 font-lg font-mono text-red-400">Contoh =></p>
+                <p class="my-2 font-lg font-mono text-white">/welcome <span class="text-green-400">#welcome-channel</span> <span class="text-blue-400">Selamat datang di discord kami @</span></p>
+            </div>
+            <table class="table-fixed w-full">
+                <thead>
+                  <tr class="focus:outline-none h-16 w-full text-sm leading-none text-gray-800">
+                    <th class="w-1/4 font-normal text-white text-left pl-4">Command</th>
+                    <th class="w-3/4 font-normal text-white text-left pl-12">Description</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+    
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">[channel]</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Pilih channel untuk dijadikan tempat notifikasi</td>
+                  </tr>
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">[message]</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Isi pesan ketika guild member masuk</td>
+                  </tr>
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">@</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Akan berisi user yang masuk</td>
+                </tr>
+                </tbody>
+              </table>
+        
+        </div>
+    </section>
+
+    <section>
+        <div class="w-isi mx-auto font-inter px-5">
+            <div class="bg-dark2 mt-20 py-10 px-14 table-auto">
+            <h2 class="text-white text-2xl font-bold">Prefix Command</h2>
+            <p class="my-2 font-lg text-gray-300">Macam command yang menggunakan Prefix</p>
+            <table class="table-fixed w-full">
+                <thead>
+                  <tr class="focus:outline-none h-16 w-full text-sm leading-none text-gray-800">
+                    <th class="w-1/4 font-normal text-white text-left pl-4">Command</th>
+                    <th class="w-3/4 font-normal text-white text-left pl-12">Description</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+    
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">+ping</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Mengecek apakah Shuna bangun</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </section>
+
+    <section>
+        <div class="w-isi mx-auto font-inter px-5">
+            <div class="bg-dark2 mt-20 py-10 px-14 table-auto">
+            <h2 class="text-white text-2xl font-bold">Slash Command</h2>
+            <p class="my-2 font-lg text-gray-300">Macam Slash command</p>
+            <table class="table-fixed w-full">
+                <thead>
+                  <tr class="focus:outline-none h-16 w-full text-sm leading-none text-gray-800">
+                    <th class="w-1/4 font-normal text-white text-left pl-4">Command</th>
+                    <th class="w-3/4 font-normal text-white text-left pl-12">Description</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+    
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/welcome</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Memilih channel dan pesan untuk menyambut member baru</td>
+                  </tr>
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/help</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Mencari pertolongan tentang Shuna</td>
+                  </tr>
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/setnick</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Mengganti nickname daru member</td>
+                </tr>
+                <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/newprefix</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Mengganti prefix defautl maupun yang sudah di custom</td>
+                </tr>
+                <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/support</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Memberikan support pada Shuna melalui pesan, saran, tanggapan, laporan bug, dll</td>
+                </tr>
+                <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/ban</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Ban member nakal</td>
+                </tr>
+                <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/kick</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">kick member nakal</td>
+                </tr>
+                <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/unban</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Unban member yang telah di ban</td>
+                </tr>
+                </tbody>
+              </table>
+        </div>
+    </section>
+
+    <section>
+        <div class="w-isi mx-auto font-inter px-5">
+            <div class="bg-dark2 mt-20 py-10 px-14 table-auto">
+            <h2 class="text-white text-2xl font-bold">Music Bot</h2>
+            <table class="table-fixed w-full">
+                <thead>
+                  <tr class="focus:outline-none h-16 w-full text-sm leading-none text-gray-800">
+                    <th class="w-1/4 font-normal text-white text-left pl-4">Command</th>
+                    <th class="w-3/4 font-normal text-white text-left pl-12">Description</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+    
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">Play music</p>
+                                <p class="text-xs leading-3 text-gray-600 pt-2">+play [judul lagu]</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12">Mainkan musik dari youtube/spotify/soundcloud</td>
+                  </tr>
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">Skip music</p>
+                                <p class="text-xs leading-3 text-gray-600 pt-2">+skip</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12">Skip musik dari playlist</td>
+                  </tr>
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">Stop music</p>
+                                <p class="text-xs leading-3 text-gray-600 pt-2">+stop</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12">Hentikan Shuna bermain musik</td>
+                  </tr>
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">Cek playlist</p>
+                                <p class="text-xs leading-3 text-gray-600 pt-2">+queue</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12">Cek playlist dari musik yang dimainkan</td>
+                  </tr>
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">Toggle autoplay</p>
+                                <p class="text-xs leading-3 text-gray-600 pt-2">+autoplay</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12">Toggle autoplay on/off <span class="font-bold">[default: on]</span></td>
+                  </tr>
+                  <tr class="focus:outline-none h-20 text-sm leading-none text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">Toggle repeat</p>
+                                <p class="text-xs leading-3 text-gray-600 pt-2">+repeat</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12">Toggle repeat lagu/playlist/off <span class="font-bold">[default: off]</span></td>
+                  </tr>
+                </tbody>
+              </table>
+        
+        </div>
+    </section>
+
+    <section class="mt-20">
+
+    </section>
+</body>
+</html>
