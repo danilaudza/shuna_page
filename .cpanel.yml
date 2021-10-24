@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/danilaud/shuna.danilaudza.com/
+    - /bin/cp -R images $DEPLOYPATH
