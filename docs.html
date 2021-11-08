@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/jpg" href="st.png"/>
     <title>Shuna | Docs</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
         <div class="w-full text-gray-200 pt-5 bg-dark font-inter">
         <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
             <div class="p-4 flex flex-row items-center justify-between">
-            <a href="/" class="text-lg font-semibold tracking-widest rounded-lg text-white">Shuna</a>
+            <a href="/" class="text-lg font-semibold tracking-widest rounded-lg text-white bosadow">Shuna</a>
             <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                 <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
                 <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -28,6 +29,7 @@
             <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
             <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 md:ml-4" href="https://danilaudza.com/">Author</a>
             <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 md:ml-4 disabled text-white" href="docs.html">Documentation</a>
+            <a class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-0 md:ml-4" href="https://saweria.co/danilaudza">Donation</a>
             </nav>
         </div>
         </div>
@@ -49,7 +51,7 @@
             <h2 class="text-white text-2xl font-bold">Welcoming Message</h2>
             <p class="my-2 font-lg text-gray-300">Pakai slash command /welcome</p>
             <div class="bg-dark px-5 py-5 rounded-lg">
-                <p class="my-2 font-lg font-mono text-white">/welcome <span class="text-green-400">[channel]</span> <span class="text-blue-400">[message]</span></p>
+                <p class="my-2 font-lg font-mono text-white">/welcome <span class="text-green-400">[channel]</span> <span class="text-blue-400">[message]</span> <span class="text-pink-400">[roles]</span></p>
                 <p class="my-2 font-lg font-mono text-red-400">Contoh =></p>
                 <p class="my-2 font-lg font-mono text-white">/welcome <span class="text-green-400">#welcome-channel</span> <span class="text-blue-400">Selamat datang di discord kami @</span></p>
             </div>
@@ -91,6 +93,16 @@
                         </div>
                     </td>
                     <td class="pl-12 pr-5">Akan berisi user yang masuk</td>
+                </tr>
+                <tr class="focus:outline-none h-20 text-sm leading-snug text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">[roles]</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">[Opsional] Setelah masuk akan mendapat role</td>
                 </tr>
                 </tbody>
               </table>
@@ -222,6 +234,36 @@
                         </div>
                     </td>
                     <td class="pl-12 pr-5">Unban member yang telah di ban</td>
+                </tr>
+                <tr class="focus:outline-none h-20 text-sm leading-snug text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/music</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Mengecek status musik</td>
+                </tr>
+                <tr class="focus:outline-none h-20 text-sm leading-snug text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/invite</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Invite orang guild untuk bermain game</td>
+                </tr>
+                <tr class="focus:outline-none h-20 text-sm leading-snug text-gray-800 bg-white hover:bg-gray-100 border-b border-t border-gray-100">
+                    <td>
+                        <div class="flex items-center">
+                            <div class="pl-4">
+                                <p class="font-bold">/clean</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="pl-12 pr-5">Membersihkan chat Shuna dan command prefix</td>
                 </tr>
                 </tbody>
               </table>
